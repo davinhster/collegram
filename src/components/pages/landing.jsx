@@ -4,7 +4,7 @@ function Landing(){
     return(
         <section>
             <div className="Landing">
-                <h1> Landing123 </h1>
+                <h1> Landing </h1>
             </div>
         </section>
     )

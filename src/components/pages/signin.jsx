@@ -4,7 +4,7 @@ function Signin(){
     return(
         <section>
             <div className="Signgin">
-                <h1> Landing</h1>
+                <h1> Signin </h1>
             </div>
         </section>
     )

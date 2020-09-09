@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import Landing from './components/pages/landing'
 import Signin from './components/pages/signin'
+import Signup from './components/pages/signup'
+
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route path="/signin">
             <Signin /> 
+          </Route>
+          <Route path="signup">
+            <Signup />
           </Route>
         </Switch>
       </Router>

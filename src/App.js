@@ -24,10 +24,10 @@ function App() {
           <Route path="/signin">
             <Signin /> 
           </Route>
-          <Route path="signup">
+          <Route path="/signup">
             <Signup />
           </Route>
-          <Route path="home">
+          <Route path="/home">
             <Home />
           </Route>
         </Switch>

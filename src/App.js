@@ -10,6 +10,7 @@ import {
 import Landing from './components/pages/landing'
 import Signin from './components/pages/signin'
 import Signup from './components/pages/signup'
+import Home from './components/pages/home'
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="signup">
             <Signup />
+          </Route>
+          <Route path="home">
+            <Home />
           </Route>
         </Switch>
       </Router>

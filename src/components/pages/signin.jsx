@@ -3,7 +3,7 @@ import React from 'react'
 function Signin(){
     return(
         <section>
-            <div className="Signgin">
+            <div className="Sign in">
                 <h1> Signin Page </h1>
             </div>
         </section>

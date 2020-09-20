@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,12 +12,14 @@ import Landing from './components/pages/landing'
 import Signin from './components/pages/signin'
 import Signup from './components/pages/signup'
 import Home from './components/pages/home'
+import Navbar from './components/navbar'
 
 
 function App() {
   return (
     <div className="App">
       <Router>
+      <Navbar / >
         <Switch>
           <Route exact path="/">
             <Landing />

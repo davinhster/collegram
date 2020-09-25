@@ -9,7 +9,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Landing from './components/pages/landing'
-import Signin from './components/pages/signin'
+import Login from './components/pages/signin'
 import Signup from './components/pages/signup'
 import Home from './components/pages/home'
 import Navbar from './components/navbar'
@@ -18,14 +18,14 @@ import Navbar from './components/navbar'
 function App() {
   return (
     <div className="App">
-      <Router>
+      {/* <Router>
       <Navbar / >
         <Switch>
           <Route exact path="/">
             <Landing />
           </Route>
           <Route path="/signin">
-            <Signin /> 
+            <Login /> 
           </Route>
           <Route path="/signup">
             <Signup />
@@ -34,6 +34,19 @@ function App() {
             <Home />
           </Route>
         </Switch>
+      </Router> */}
+
+      <Router>
+      <div className = "container">
+
+      <Navbar />
+      <br/>
+      <Route path="/" exact component={Landing} />
+      <Route path="/signin" component={Login} />
+      <Route path="/signup" component={Signup} />
+      <Route path="/home" component={Home} />
+
+      </div>
       </Router>
     </div>
   );

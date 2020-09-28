@@ -1,16 +1,31 @@
 import React, {Component} from 'react'
-import { Form, Button} from "react-bootstrap";
 
 
 export default class Login extends Component {
 
     constructor(props) {
         super(props);
-        this.handleEvent = this.handleEvent.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        
+
+        this.state = {
+            username : '',
+            password : '',
+        }
       }
 
-    handleEvent() {
-        console.log(this.props);
+    onChangeUsername(e) {
+        this.setState({
+            username: e.target.value
+        });
+    }
+
+    onChangePassword(e){
+        this.setState({
+            password : e.target.value
+        });
     }
 
     Signin(){
@@ -24,30 +39,59 @@ export default class Login extends Component {
         )
     }
 
+    onSubmit() {
+
+        var passwordHash = require('password-hash');
+        var hashedPassword = passwordHash.generate(this.state.password);
+
+        const user = {
+            username : this.state.username,
+            password : hashedPassword,
+        }
+
+        console.log(user);
+        console.log(this.state.password);
+        //replace hashedPassword with GET PASSWORD from database to see if the input matches password
+        if (passwordHash.verify(this.state.password,hashedPassword))
+        {
+            console.log("YESSS VALIDATION WORKS");
+        }
+        else
+        {
+            console.log("password and hash does not match");
+        }
+    }
+
     render() {
 
         return (
-        
-        <Form>
-        <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-            </Form.Text>
-        </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember me" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
-            Submit
-        </Button>
-        </Form>
+            <div>
+                <h3> Login </h3>
+                <form onSubmit = {this.onSubmit}>
+                    <div className =  "form-group">
+                        <label>Username: </label>
+                        <input type = "text"
+                            required
+                            className = "form-control"
+                            value = {this.state.username}
+                            onChange = {this.onChangeUsername}
+                        />
+                    </div>
+                    <div className = "form-group">
+                        <label>Password</label>
+                        <input type = "password"
+                            required
+                            className = "form-control"
+                            value = {this.state.password}
+                            onChange = {this.onChangePassword}
+                        />
+                    </div>
+                    <div className = "form-group">
+                        <input type = "submit" value = "Login" className = "btn btn-primary" />
+                    </div>
+                </form>
+            </div>
         )
     };
 

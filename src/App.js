@@ -7,6 +7,7 @@ import Login from './components/pages/signin'
 import Signup from './components/pages/signup'
 import Home from './components/pages/Home/home'
 import Navbar from './components/navbar'
+import About from './components/pages/about'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path="/signin" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/home" component={Home} />
+      <Route path ="/about" component= {About} />
 
       </div>
       </Router>

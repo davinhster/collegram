@@ -10,6 +10,12 @@
     text-align:center;
 }
 
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+
 .registerBtn{
     border: solid #373F51;
     margin-top: 5%;

@@ -12,6 +12,7 @@ function Landing(){
                 <Link to="/signin">
                     <button className="loginBtn"> Login </button>
                 </Link>
+                <div className="divider"/>
                 <Link to="/signup">
                     <button className="registerBtn"> Register </button>
                 </Link>

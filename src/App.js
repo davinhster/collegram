@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landing from './components/pages/landing'
 import Login from './components/pages/signin'
 import Signup from './components/pages/signup'
-import Home from './components/pages/home'
+import Home from './components/pages/Home/home'
 import Navbar from './components/navbar'
 
 

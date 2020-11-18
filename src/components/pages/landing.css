@@ -1,0 +1,19 @@
+.landingHeader{
+    font-size: 7rem;
+}
+
+.landing1{
+    text-align:center;
+}
+
+.registerBtn{
+    border: solid #373F51;
+    margin-top: 5%;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+}
+

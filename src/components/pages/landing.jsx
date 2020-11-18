@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
+
+import './landing.css'
 
 function Landing(){
     return(
-        <section>
-            <div className="Landing">
-                <h1> Landing </h1>
+        <section className="landing">
+            <div className="landing1">
+                <h1 className="landingHeader"> Collegram </h1>
+                <Link to="/signup">
+                    <button className="registerBtn"> Register </button>
+                </Link>
             </div>
         </section>
     )

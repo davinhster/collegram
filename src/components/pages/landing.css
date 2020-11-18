@@ -3,7 +3,11 @@
 }
 
 .landingSubheader{
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+.landingDescription{
+    font-size: 1.5rem;
 }
 
 .landing1{
@@ -11,7 +15,7 @@
 }
 
 .divider{
-    width:20px;
+    width:200px;
     height:auto;
     display:inline-block;
 }
@@ -25,11 +29,19 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.5rem;
+    box-shadow: 0 9px #999;
+    width: 250px;
 }
 
 .registerBtn:hover {
     background-color: #212529;
     color: #f8f9fa;
+}
+
+.registerBtn:active {
+    background-color: #212529;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .loginBtn{
@@ -41,9 +53,17 @@
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 1.5rem;
+    box-shadow: 0 9px #999;
+    width: 250px;
 }
 
 .loginBtn:hover {
     background-color: #212529;
     color: #f8f9fa;
+}
+
+.loginBtn:active {
+    background-color: #212529;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

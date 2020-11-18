@@ -1,5 +1,9 @@
 import React, {Component, useState } from 'react'
-import GLogin from '../GLogin';
+import { Link } from "react-router-dom";
+
+// import GLogin from '../GLogin';
+import './signup.css'
+
 
 
 class Signup extends Component{
@@ -28,18 +32,40 @@ class Signup extends Component{
 
     render(){
     return(
-        <section>
-            <div className="Signup">
-                <form onSubmit={this.handleSubmit}>
-                    <label> Email </label>
-                    <input type="email" name="email" onChange={this.handleChange} />
+        <section className="Signup">
+            <div className="Signupcontainer">
 
-                    <label> Password </label>
-                    <input type="password" name="password" onChange={this.handleChange}/>
-                    <input type="submit" value="Register" />
-                </form>
-                <h1> Google Signup </h1>
-                <GLogin/>
+                <div className="signupHalf leftHalf">
+                    <h1 className="leftHeader"> Welcome Back! </h1>
+                    <h2 className="leftDesc"> Already have an account? It's great to see you again </h2>
+                    <div>
+                        <Link to="/signin">
+                        <button className="signinBtn"> Sign in </button>
+
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="signupHalf">
+
+                    <h1 className="rightHeader"> Create Account </h1>
+                    <form onSubmit={this.handleSubmit}>
+
+
+                        <h3 className="formInput"> Email </h3>
+                        <input type="email" name="email" onChange={this.handleChange} />
+
+                        <br />
+
+                        <h3 className="formInput"> Password </h3>
+                        <input type="password" name="password" onChange={this.handleChange}/>
+
+                        <br />
+
+                        <input className="registerBtn" type="submit" value="Register" />
+                    </form>
+                </div>
+               
             </div>
         </section>
             )

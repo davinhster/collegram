@@ -1,0 +1,56 @@
+.Signupcontainer{
+    display: grid;
+    grid-gap :0;
+    height: 100vh;
+    width: auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 50%;
+
+}
+
+.signupHalf{
+    padding-top: 40%;
+    text-align:center;
+}
+
+.leftHalf{
+    background-color: #A72608;
+}
+
+
+.leftHeader{
+    color: white;
+    font-size: 3.5rem;
+}
+
+.leftDesc{
+    color: white;
+    font-size: 1rem;
+}
+
+
+.signinBtn{
+    border: solid white;
+    color: white;
+    margin-top: 5%;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+
+/* RIGHT HALF STUFF */
+
+.rightHeader{
+    font-size: 3.5rem;
+}
+
+.formInput{
+    margin-bottom: 0px;
+    margin-top: 3%;
+    font-size: 1.2rem;
+}

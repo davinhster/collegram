@@ -2,6 +2,10 @@
     font-size: 7rem;
 }
 
+.landingSubheader{
+    font-size: 2rem;
+}
+
 .landing1{
     text-align:center;
 }
@@ -17,3 +21,23 @@
     font-size: 1.5rem;
 }
 
+.registerBtn:hover {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+.loginBtn{
+    border: solid #373F51;
+    margin-top: 5%;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.loginBtn:hover {
+    background-color: #212529;
+    color: #f8f9fa;
+}

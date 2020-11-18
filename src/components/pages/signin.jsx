@@ -75,7 +75,7 @@ export default class Login extends Component {
 
                 <form onSubmit = {this.onSubmit}>
                     <div className =  "form-group">
-                        <label>Username: </label>
+                        <label>Username </label>
                         <input type = "text"
                             required
                             className = "form-control"
@@ -93,7 +93,7 @@ export default class Login extends Component {
                         />
                     </div>
                     <div className = "form-group">
-                        <input type = "submit" value = "Login" className = "btn btn-primary" />
+                        <button className="button"> Login </button>
                     </div>
                 </form>
             </div>

@@ -29,20 +29,46 @@ class Signup extends Component{
 
     render(){
     return(
-        <section>
-            <div className="Signup">
-                <form onSubmit={this.handleSubmit}>
-                    <label> Email </label>
-                    <input type="email" name="email" onChange={this.handleChange} />
+        <div>
+                <h3> Register </h3>
 
-                    <label> Password </label>
-                    <input type="password" name="password" onChange={this.handleChange}/>
-                    <input type="submit" value="Register" />
+
+
+                <form onSubmit = {this.onSubmit}>
+                    <div className =  "form-group">
+                        <label>Username </label>
+                        <input type = "text"
+                            required
+                            className = "form-control"
+                            value = {this.state.username}
+                            onChange = {this.onChangeUsername}
+                        />
+                    </div>
+                    <div className =  "form-group">
+                        <label>Email </label>
+                        <input type = "text"
+                            required
+                            className = "form-control"
+                            value = {this.state.username}
+                            onChange = {this.onChangeUsername}
+                        />
+                    </div>
+                    <div className = "form-group">
+                        <label>Password</label>
+                        <input type = "password"
+                            required
+                            className = "form-control"
+                            value = {this.state.password}
+                            onChange = {this.onChangePassword}
+                        />
+                    </div>
+                    <div className = "form-group">
+                        <button className="button"> Register </button>
+                    </div>
                 </form>
-                <h1> Google Signup </h1>
+                <h3> Register Using a Google Account </h3>
                 <GLogin/>
             </div>
-        </section>
             )
             }   
 }

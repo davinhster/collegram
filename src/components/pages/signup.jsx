@@ -6,7 +6,7 @@ import './signup.css'
 
 
 
-class Signup extends Component{
+export default class Signup extends Component{
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,7 +33,6 @@ class Signup extends Component{
 
     render(){
     return(
-<<<<<<< HEAD
         <section className="Signup">
             <div className="Signupcontainer">
 
@@ -67,51 +66,8 @@ class Signup extends Component{
                         <input className="registerBtn" type="submit" value="Register" />
                     </form>
                 </div>
-               
-=======
-        <div>
-                <h3> Register </h3>
-
-
-
-                <form onSubmit = {this.onSubmit}>
-                    <div className =  "form-group">
-                        <label>Username </label>
-                        <input type = "text"
-                            required
-                            className = "form-control"
-                            value = {this.state.username}
-                            onChange = {this.onChangeUsername}
-                        />
-                    </div>
-                    <div className =  "form-group">
-                        <label>Email </label>
-                        <input type = "text"
-                            required
-                            className = "form-control"
-                            value = {this.state.username}
-                            onChange = {this.onChangeUsername}
-                        />
-                    </div>
-                    <div className = "form-group">
-                        <label>Password</label>
-                        <input type = "password"
-                            required
-                            className = "form-control"
-                            value = {this.state.password}
-                            onChange = {this.onChangePassword}
-                        />
-                    </div>
-                    <div className = "form-group">
-                        <button className="button"> Register </button>
-                    </div>
-                </form>
-                <h3> Register Using a Google Account </h3>
-                <GLogin/>
->>>>>>> 23808447cea017f76a80a56ee7077414a0aea8a0
             </div>
-            )
-            }   
+        </section>
+               
+    )}
 }
-
-export default Signup

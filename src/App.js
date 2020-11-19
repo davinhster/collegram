@@ -18,12 +18,7 @@ function App() {
       <Route path="/signin" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/home" component={Home} />
-<<<<<<< HEAD
-=======
       <Route path ="/about" component= {About} />
-
-      </div>
->>>>>>> 23808447cea017f76a80a56ee7077414a0aea8a0
       </Router>
     </div>
   );

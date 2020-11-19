@@ -12,9 +12,7 @@ import Navbar from './components/navbar'
 function App() {
   return (
     <div className="App">
-
       <Router>
-      <br/>
       <Route path="/" exact component={Landing} />
       <Route path="/signin" component={Login} />
       <Route path="/signup" component={Signup} />

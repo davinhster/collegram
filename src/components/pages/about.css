@@ -1,0 +1,17 @@
+body{
+    background-color: #EEE;
+}
+
+.About{
+    align-items: center;
+    height: 100%;
+}
+
+.About1{
+    text-align:center;
+}
+
+.aboutHeader{
+    color: #343a40;
+    font-size: 4rem;
+}

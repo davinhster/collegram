@@ -22,6 +22,8 @@ export default class Signup extends Component{
             email: this.state.email,
             password: this.state.password
         };
+
+        console.log("Clicked");
     };
 
     handleChange = function(e){

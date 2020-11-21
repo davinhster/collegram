@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 
+import { Link, Redirect } from "react-router-dom";
+import Navbar from '../navbar'
+
+import axios from 'axios';
 
 export default class Login extends Component {
 
@@ -11,10 +15,13 @@ export default class Login extends Component {
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         
+        
 
         this.state = {
             username : '',
             password : '',
+            redirectToReferrer: false,
+            test : ''
         }
       }
 
@@ -41,8 +48,10 @@ export default class Login extends Component {
         )
     }
 
-    onSubmit() {
-
+    onSubmit(e) {
+        e.preventDefault();
+        console.log(this.state.test);
+        this.setState({redirectToReferrer:true});
         var passwordHash = require('password-hash');
         var hashedPassword = passwordHash.generate(this.state.password);
 
@@ -64,37 +73,59 @@ export default class Login extends Component {
         }
     }
 
+
+
+    // render() {
+
+    //     return (
+
+    //         <div>
+    //             <h3> Login </h3>
+
+
+
+    //             <form onSubmit = {this.onSubmit}>
+    //                 <div className =  "form-group">
+    //                     <label>Username </label>
+    //                     <input type = "text"
+    //                         required
+    //                         className = "form-control"
+    //                         value = {this.state.username}
+    //                         onChange = {this.onChangeUsername}
+    //                     />
+    //                 </div>
+    //                 <div className = "form-group">
+    //                     <label>Password</label>
+    //                     <input type = "password"
+    //                         required
+    //                         className = "form-control"
+    //                         value = {this.state.password}
+    //                         onChange = {this.onChangePassword}
+    //                     />
+    //                 </div>
+    //                 <div className = "form-group">
+    //                     <button className="button"> Login </button>
+    //                 </div>
+    //             </form>
+    //         </div>
+    //     )
+    // };
+
     render() {
-
+        var redirectToReferrer = this.state.redirectToReferrer;
+        if (redirectToReferrer) {
+            return <Redirect to="/home" />
+        }
         return (
-
+            
             <div>
+                <Navbar />
+                
                 <h3> Login </h3>
 
-
-
-                <form onSubmit = {this.onSubmit}>
-                    <div className =  "form-group">
-                        <label>Username </label>
-                        <input type = "text"
-                            required
-                            className = "form-control"
-                            value = {this.state.username}
-                            onChange = {this.onChangeUsername}
-                        />
-                    </div>
-                    <div className = "form-group">
-                        <label>Password</label>
-                        <input type = "password"
-                            required
-                            className = "form-control"
-                            value = {this.state.password}
-                            onChange = {this.onChangePassword}
-                        />
-                    </div>
-                    <div className = "form-group">
-                        <button className="button"> Login </button>
-                    </div>
+                <form onSubmit = {this.onSubmit} name = "test">
+                    <input type = "username" />
+                    <p><button>Submit</button></p>
                 </form>
             </div>
         )

@@ -79,12 +79,13 @@ router.route('/').get((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
-//restore atlas uri once done
-//  ATLAS_URI = mongodb+srv://collegramUser:ilovecmpe133@collegram.vokci.mongodb.net/<dbname>?retryWrites=true&w=majority
-// router.route('/register').get((req,res)=>{
-    
+  router.route('/:id').get((req, res) => {
+    User.findById(req.params.id)
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json('Error: ' + err));
+  });
 
-//     res.send("User credentials submitted");
-// });
+
+
 
 module.exports = router;

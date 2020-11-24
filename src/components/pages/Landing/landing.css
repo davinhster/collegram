@@ -1,45 +1,45 @@
-.landingHeader{
-    color: #343a40;
-    font-size: 7rem;
+.landingHeader {
+  color: #343a40;
+  font-size: 7rem;
 }
 
-.landingSubheader{
-    color: #343a40;
-    font-size: 3rem;
+.landingSubheader {
+  color: #343a40;
+  font-size: 3rem;
 }
 
-.landingDescription{
-    color: #343a40;
-    font-size: 1.5rem;
+.landingDescription {
+  color: #343a40;
+  font-size: 1.5rem;
 }
 
-.landing1{
-    text-align:center;
+.landing1 {
+  text-align: center;
 }
 
-.divider{
-    width:200px;
-    height:auto;
-    display:inline-block;
+.divider {
+  width: 200px;
+  height: auto;
+  display: inline-block;
 }
 
-.button{
-    border: solid #343a40;
-    color: #343a40;
-    margin-top: 5%;
-    border-radius: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 1.5rem;
-    width: 250px;
-    transition-duration: 0.4s;
+.button {
+  border: solid #007bff;
+  color: #343a40;
+  margin-top: 5%;
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+  width: 250px;
+  transition-duration: 0.4s;
 }
 
 .button:hover {
-    background-color: #343a40;
-    color: #EEE;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #007bff;
+  color: #eee;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-

@@ -20,33 +20,34 @@
 .divider {
   width: 200px;
   height: auto;
-  display: inline-block;
 }
 
 .button {
   border: solid #007bff;
   color: #343a40;
   margin-top: 5%;
-  border-radius: 30px;
+  border-radius: none;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.5rem;
   width: 250px;
-  position: relative;
+  position: center;
   transition-duration: 0.4s;
 }
 
 #login_button {
-  position: absolute;
-  left: 40%;
+  position: center;
+  left: 42.5%;
 }
+
 #register_button {
-  position: absolute;
-  left: 40%;
+  position: center;
+  left: 42.5%;
   top: 45%;
 }
+
 .button:hover {
   background-color: #007bff;
   color: #eee;

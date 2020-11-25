@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../navbar";
 
 // import GLogin from '../GLogin';
 import "./signup.css";

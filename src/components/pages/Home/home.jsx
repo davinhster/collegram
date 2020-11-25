@@ -45,7 +45,7 @@ export default class Home extends Component {
                     <h1 className="homeHeader"> Home page </h1>
                 </div>
 
-                <h3>Logged Exercises</h3>
+                <h3>Users</h3>
                 <table className="table">
                 <thead className="thead-light">
                     <tr>

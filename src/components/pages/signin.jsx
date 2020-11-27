@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { Link, Redirect } from "react-router-dom";
 import Navbar from "../navbar";
+import ValidatedLoginForm from "./validatesignin";
+
 
 import axios from "axios";
 
@@ -107,15 +109,7 @@ export default class Login extends Component {
     return (
       <div>
         <Navbar />
-
-        <h3> Login </h3>
-
-        <form onSubmit={this.onSubmit} name="test">
-          <input type="username" />
-          <p>
-            <button>Submit</button>
-          </p>
-        </form>
+      <ValidatedLoginForm/>
       </div>
     );
   }

@@ -83,6 +83,14 @@ router.route('/').get((req, res) => {
     User.findById(req.params.id)
         .then(user => res.json(user))
         .catch(err => res.status(400).json('Error: ' + err));
+
+        console.log(req.params);
+  });
+
+  router.route('/email/:email').get((req, res) => {
+    User.findOne({"email":req.params.email})
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json('Error: ' + err));
   });
 
 

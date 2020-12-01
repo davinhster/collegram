@@ -1,64 +1,63 @@
-.Signupcontainer{
-    display: grid;
-    grid-gap :0;
-    height: 100vh;
-    width: auto;
-    grid-template-rows: 1fr;
-    grid-template-columns: 50% 50%;
-
+.navbar_signup {
+  position: absolute;
+}
+.Signupcontainer {
+  display: grid;
+  grid-gap: 0;
+  height: 100vh;
+  width: auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% 50%;
 }
 
-.signupHalf{
-    padding-top: 40%;
-    text-align:center;
+.signupHalf {
+  padding-top: 40%;
+  text-align: center;
 }
 
-.leftHalf{
-    background-color: #007bff;
+.leftHalf {
+  background-color: #007bff;
 }
 
-
-.leftHeader{
-    color: white;
-    font-size: 3.5rem;
+.leftHeader {
+  color: white;
+  font-size: 3.5rem;
 }
 
-.leftDesc{
-    color: white;
-    font-size: 1rem;
+.leftDesc {
+  color: white;
+  font-size: 1rem;
 }
 
-
-.signinBtn{
-    border: solid white;
-    color: white;
-    margin-top: 5%;
-    border-radius: none;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    transition-duration: 0.4s;
+.signinBtn {
+  border: solid white;
+  color: white;
+  margin-top: 5%;
+  border-radius: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  transition-duration: 0.4s;
 }
 
 .signinBtn:hover {
-    background-color: #eee;
-    color: #007bff;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-
+  background-color: #eee;
+  color: #007bff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 /* RIGHT HALF STUFF */
 
-.rightHeader{
-    font-size: 3.5rem;
+.rightHeader {
+  font-size: 3.5rem;
 }
 
-.formInput{
-    margin-bottom: 0px;
-    margin-top: 3%;
-    font-size: 1.2rem;
+.formInput {
+  margin-bottom: 0px;
+  margin-top: 3%;
+  font-size: 1.2rem;
 }

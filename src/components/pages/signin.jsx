@@ -5,6 +5,7 @@ import Navbar from "../navbar";
 import ValidatedLoginForm from "./validatesignin";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import "./signin.css";
 
 
 import axios from "axios";
@@ -66,7 +67,7 @@ export default class Login extends Component {
       <div>
         
         <Navbar />
-
+        <h1 className="signInHeader"> Login </h1>
         <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, { setSubmitting }) => {

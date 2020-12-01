@@ -1,0 +1,9 @@
+.signInHeader {
+    color: #343a40;
+    font-size: 3.5rem;
+  }
+
+.signInDivider {
+  width: 200px;
+  height: auto;
+}

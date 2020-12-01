@@ -51,3 +51,7 @@ cursor: pointer;
 background-color: white;
 color: rgb(70, 153, 179);
 }
+
+.form-error {
+    color: rgb(235, 54, 54);
+}

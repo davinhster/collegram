@@ -21,6 +21,7 @@ export default class Login extends Component {
     this.state = {
       // dataEmail: "",
       // dataPassword: "",
+      formError: false,
       data: {},
       redirectToReferrer: false,
     };
@@ -85,9 +86,9 @@ export default class Login extends Component {
             console.log("testing print start");
             if(this.state.data == null )
             {
+              this.setState({formError:true});
+              console.log(this.state.formError);
               console.log("Invalid Email/Passowrd");
-
-  
             }
             else
             {
@@ -136,7 +137,7 @@ export default class Login extends Component {
 
             
             <form onSubmit={handleSubmit}>
-
+                {this.state.formError? <div className = "form-error">Incorrect Email/Password</div> : null}
               <label htmlFor="email">Email</label>
               
                 <input

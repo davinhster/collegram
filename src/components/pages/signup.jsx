@@ -52,6 +52,9 @@ export default class Signup extends React.Component {
   render() {
     return (
       <section className="Signup">
+        <div className="navbar_signup">
+          <Navbar />
+        </div>
         <div className="Signupcontainer">
           <div className="signupHalf leftHalf">
             <h1 className="leftHeader"> Welcome Back! </h1>

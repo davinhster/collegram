@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
+    "formik": "^2.2.5",
     "mongoose": "^5.10.15",
     "password-hash": "^1.2.2",
     "react": "^16.13.1",
@@ -16,7 +19,8 @@
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.21",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "yup": "^0.31.0"
   },
   "scripts": {
     "start": "react-scripts start",

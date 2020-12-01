@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/user.model');
-const bcript = require('bcrypt');
+const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 const mongoosoe = require('mongoose');
 
@@ -11,45 +11,89 @@ const mongoosoe = require('mongoose');
 // @desc Register a new user
 // @access Public
 
-router.route('/register').post((req,res)=>{
-    const BCRYPT_SALT_ROUNDS = 12;
-    const {userName, password} = req.body;
+// router.route('/register').post((req,res)=>{
+//     const BCRYPT_SALT_ROUNDS = 12;
+//     const {email, password} = req.body;
 
-    //Check for existing user
-    User.findOne({email})
-        .then(user=>{
-            if(user) return res.status(400).json({msg: 'User already exists'});
+//     //Check for existing user
+//     User.findOne({email})
+//         .then(user=>{
+//             if(user) return res.status(400).json({msg: 'User already exists'});
 
-            let hashedPassword = bcrypt.hashSync(password, BCRYPT_SALT_ROUNDS);
+//             let hashedPassword = bcrypt.hashSync(password, BCRYPT_SALT_ROUNDS);
 
-            //create newUser
-            const newUser = new User({firstName, lastName, hashedPassword, email});
+//             //create newUser
+//             const newUser = new User({firstName, lastName, hashedPassword, email});
 
-            //save newUser
-            newUser.save()
-                .then(user=>{
-                    jwt.sign(
-                        {
-                            user_id: user.id
-                        },
-                         process.env.JWT_SECRET,
-                         (err, token) =>{
-                             if(err) throw err;
-                             res.json({
-                                 token,
-                                 user:{
-                                     firstName: user.firstName,
-                                     lastName: user.lastName,
-                                     user_id: user.id,
-                                     email: user.email
-                                 }
-                             })
-                         }
+//             //save newUser
+//             newUser.save()
+//                 .then(user=>{
+//                     jwt.sign(
+//                         {
+//                             user_id: user.id
+//                         },
+//                          process.env.JWT_SECRET,
+//                          (err, token) =>{
+//                              if(err) throw err;
+//                              res.json({
+//                                  token,
+//                                  user:{
+//                                      firstName: user.firstName,
+//                                      lastName: user.lastName,
+//                                      user_id: user.id,
+//                                      email: user.email
+//                                  }
+//                              })
+//                          }
 
-                    )
-                })
-                .catch(err => res.status(400).json('Erorr: ' + err))
-        })
+//                     )
+//                 })
+//                 .catch(err => res.status(400).json('Erorr: ' + err))
+//         })
+//         res.send("User credentials submitted");
+// });
+
+
+router.route('/register').post((req,res) => {
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const hashedPassword = req.body.hashedPassword;
+    const email = req.body.email;
+  
+    const newUser = new User({
+      firstName,
+      lastName,
+      hashedPassword,
+      email
+
+    });
+
+    newUser.save()
+    .then(() => res.json('User added!'))
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
-module.exports = User;
+router.route('/').get((req, res) => {
+    User.find()
+      .then(users => res.json(users))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+  router.route('/:id').get((req, res) => {
+    User.findById(req.params.id)
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json('Error: ' + err));
+
+        console.log(req.params);
+  });
+
+  router.route('/email/:email').get((req, res) => {
+    User.findOne({"email":req.params.email})
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+
+
+
+module.exports = router;

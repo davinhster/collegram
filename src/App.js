@@ -19,7 +19,6 @@ function App() {
       <Route path="/signup" component={Signup} />
       <Route path="/home" component={Home} />
       <Route path ="/about" component= {About} />
-
       </Router>
     </div>
   );

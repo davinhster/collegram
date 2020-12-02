@@ -1,3 +1,11 @@
+### Website: http://collegram.herokuapp.com
+
+## Test credentials for login
+
+### `Email: test@gmail.com`
+### `Password: testing123`
+
+<br><br><br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

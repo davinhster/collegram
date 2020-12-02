@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./home.css";
 import Navbar from "../../navbar";
+import Feed from "../../feed";
 import axios from "axios";
 
 const User = (props) => (
@@ -44,6 +45,13 @@ export default class Home extends Component {
         <div className="Home2">
           <h1 className="homeHeader"> Home page </h1>
         </div>
+
+
+        <Feed />
+
+
+
+
 
         <h3>Users</h3>
         <table className="table">

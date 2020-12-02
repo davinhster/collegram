@@ -83,16 +83,12 @@ export default class Signup extends React.Component {
               <h3 className="formInput"> Email </h3>
               <input type="email" name="email" onChange={this.handleChange} />
 
-              <br />
-
               <h3 className="formInput"> Password </h3>
               <input
                 type="password"
                 name="password"
                 onChange={this.handleChange}
               />
-
-              <br />
 
               <input className="registerBtn" type="submit" value="Register" />
             </form>

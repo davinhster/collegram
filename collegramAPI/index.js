@@ -23,8 +23,8 @@ const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
 //POST ROUTES
-// const postsRouter = require('./routes/posts');
-// app.use('/posts', postsRouter);
+const postsRouter = require('./routes/posts');
+app.use('/posts', postsRouter);
 
 
 

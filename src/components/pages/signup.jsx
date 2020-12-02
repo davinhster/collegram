@@ -29,9 +29,7 @@ export default class Signup extends React.Component {
       email: this.state.email
     };
 
-
-    // Axios.post('http://collegramserver.herokuapp.com/users/register', user)
-    Axios.post('http://localhost:5000/users/register', user)
+    Axios.post('http://collegramserver2.herokuapp.com/users/register', user)
       .then(res => {console.log(res.data);
        this.props.history.push('/home');
       })

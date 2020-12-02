@@ -80,7 +80,7 @@ export default class Login extends Component {
             setSubmitting(false);
           }, 500)
 
-          axios.get("http://localhost:5000/users/email/" + values.email)
+          axios.get("http://collegramserver2.herokuapp.com/users/email/" + values.email)
           .then (response => { 
             //this.setState({dataEmail:response.data.email, dataPassword:response.data.hashedPassword});
             this.setState({data:response.data}, () => {console.log(this.state.data, " Raw data")});

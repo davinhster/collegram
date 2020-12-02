@@ -21,7 +21,7 @@ const handlePost = e =>{
             status: status
         }
 
-        axios.post('http://localhost:5000/posts/add',post)
+        axios.post('http://collegramserver2.herokuapp.com/posts/add',post)
         .then(res => {console.log(res.data);
             history.go(0);
             })

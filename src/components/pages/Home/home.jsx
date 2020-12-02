@@ -21,8 +21,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     axios
-      //.get("http://collegramserver.herokuapp.com/users/")
-      .get("http://localhost:5000/users/")
+      .get("http://collegramserver2.herokuapp.com/users/")
       .then((response) => {
         this.setState({ users: response.data });
       })

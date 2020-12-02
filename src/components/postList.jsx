@@ -13,7 +13,7 @@ constructor(props){
 2
 componentDidMount(){
     console.log("getting data");
-    axios.get('http://localhost:5000/posts/')
+    axios.get('http://collegramserver2.herokuapp.com/posts/')
     .then(response =>{
         this.setState({posts: response.data})
     })

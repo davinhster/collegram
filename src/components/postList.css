@@ -1,0 +1,19 @@
+.postList{
+    text-align: center;
+}
+
+.post{
+    height: auto;
+    background-color: white;
+    margin-bottom: 1%;
+    margin-left: 40%;
+    margin-right: 40%;
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.postBtn{
+    background-color: #007Bff;
+    float:right;
+}

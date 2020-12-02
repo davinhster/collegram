@@ -42,18 +42,18 @@ export default class Home extends Component {
       <section className="Home">
         <Navbar />
 
+
+
         <div className="Home2">
-          <h1 className="homeHeader"> Home page </h1>
+          <h1 className="homeHeader"> Welcome Home </h1>
         </div>
-
-
         <Feed />
 
 
 
 
 
-        <h3>Users</h3>
+        <h3>My friends</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>

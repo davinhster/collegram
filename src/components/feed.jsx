@@ -5,6 +5,8 @@ import { useState } from "react";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
+import '../components/postList.css'
+
 
 function Feed(){
 
@@ -30,9 +32,7 @@ const handlePost = e =>{
         <section>
             <form onSubmit ={handlePost} >
                 <input type="text" onChange={e => setStatus(e.target.value)}></input>
-                <button class="btn black waves-effect waves-light" type="submit" name="action"> Post
-                        <i class="material-icons right"></i>
-                    </button>
+                <button class="postBtn" type="submit" name="action"> Post </button>
             </form>
             <PostList />
         </section>

@@ -1,4 +1,5 @@
 import React from 'react'
+import './postList'
 
 function post(props){
     return(
